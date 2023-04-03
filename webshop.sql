@@ -4,7 +4,15 @@ create database verkkokauppa;
 
 use verkkokauppa;
 
-create table tarvike(
+
+create table hoito(
+    id VARCHAR(10),
+    tuotenro VARCHAR(4) primary key,
+    nimi varchar(255) not NULL,
+    hinta DOUBLE (10,2) not NULL,
+    FOREIGN KEY (id) REFERENCES lemmikki(id)
+);
+create table lelu(
     id VARCHAR(10),
     tuotenro VARCHAR(4) primary key,
     nimi varchar(255) not NULL,
@@ -23,14 +31,23 @@ create table ruoka(
     maara varchar(4) NOT NULL,
     tuotenro VARCHAR(4) NOT NULL,
     FOREIGN KEY (id) REFERENCES lemmikki(id)
-
+);
+create table tarvike(
+    id VARCHAR(10),
+    tuotenro VARCHAR(4) primary key,
+    nimi varchar(255) not NULL,
+    hinta DOUBLE (10,2) not NULL,
+    FOREIGN KEY (id) REFERENCES lemmikki(id)
 );
 
+create table ulkoilu(
+    id VARCHAR(10),
+    tuotenro VARCHAR(4) primary key,
+    nimi varchar(255) not NULL,
+    hinta DOUBLE (10,2) not NULL,
+    FOREIGN KEY (id) REFERENCES lemmikki(id)
+);
 
-create table kategoria (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nimi varchar(255) not null
-)
 
 insert into tuote (name) values ("Koiranruoka");
 insert into tuote (name) values ("Kissanruoka");
@@ -59,4 +76,4 @@ INSERT INTO ulkoilu VALUES ("koira", "038", "heijastin", 1.90);
 
 INSERT INTO tarvike values ("kissa", "044", "ruokakuppi", 7.90);
 
-INSERT INTO ruoka VALUES ("koira", "herkku", 10, 5, "046")
+INSERT INTO ruoka VALUES ("koira", "herkku", 10, 5, "046");
