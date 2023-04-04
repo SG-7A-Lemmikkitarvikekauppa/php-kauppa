@@ -1,7 +1,12 @@
 <?php
+
+    echo "<h1> päivää </h1>";
+
+
 /*
-Käyttäjätunnus:	n2leju00
-Salasana:	CAPfFf9GK29N6c7B
+Käyttäjätunnus:	webshopBackendUser
+
+Salasana:	ptKFTRWtEXGWuyqx
 Tietokannan nimi:	opisk_n2leju00
  	 
 Tietokantapalvelimen osoite:	mysli.oamk.fi*/
