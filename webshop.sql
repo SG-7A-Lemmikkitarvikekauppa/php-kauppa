@@ -77,3 +77,14 @@ INSERT INTO ulkoilu VALUES ("koira", "038", "heijastin", 1.90);
 INSERT INTO tarvike values ("kissa", "044", "ruokakuppi", 7.90);
 
 INSERT INTO ruoka VALUES ("koira", "herkku", 10, 5, "046");
+
+
+/*
+käyttäjänimi:
+webshopBackendUser
+
+salasana:
+ptKFTRWtEXGWuyqx
+
+tietokannan nimi:
+opisk_n2leju00
