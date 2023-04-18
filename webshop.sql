@@ -48,6 +48,24 @@ create table ulkoilu(
     FOREIGN KEY (id) REFERENCES lemmikki(id)
 );
 
+create table asiakas (
+    id int primary key auto_increment,
+    firstname varchar(50) not null,
+    lastname varchar(50) not null,
+    address varchar(50) not null,
+    zip varchar(50) not null,
+    city varchar(50) not null
+);
+
+create table tilaus (
+    id int primary key AUTO_INCREMENT,
+    order_date timestamp default CURRENT_TIMESTAMP,
+    asiakas_id int not null,
+    index asiakas_id(asiakas_id),
+    foreign key (asiakas_id) REFERENCES asiakas(id)
+    on delete RESTRICT
+);
+
 
 insert into tuote (name) values ("Koiranruoka");
 insert into tuote (name) values ("Kissanruoka");
