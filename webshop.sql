@@ -87,6 +87,14 @@ INSERT INTO lemmikki VALUES ("Kissa");
 INSERT INTO lemmikki VALUES ("Koira");
 
 
+INSERT INTO lelu VALUES ("koira", "011", "köysilelu", 15.90);
+INSERT INTO lelu VALUES ("koira", "012", "pallo", 9.90);
+INSERT INTO lelu VALUES ("koira", "013", "aktivointilelu", 19.90);
+INSERT INTO lelu VALUES ("koira", "014", "vinkulelu", 6);
+INSERT INTO lelu VALUES ("kissa", "015", "laserlelu", 11.90);
+INSERT INTO lelu VALUES ("kissa", "016", "pallo", 10);
+INSERT INTO lelu VALUES ("kissa", "017", "kissanminttulelu", 13.90);
+INSERT INTO lelu VALUES ("kissa", "018", "huiska", 4.90);
 INSERT INTO lelu VALUES ("kissa", "019", "leluhiiri", 8.90);
 
 INSERT INTO hoito VALUES ("kissa", "031", "kissanhiekkalapio", 2.90);
