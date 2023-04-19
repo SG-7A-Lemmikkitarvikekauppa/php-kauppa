@@ -97,13 +97,35 @@ INSERT INTO lelu VALUES ("kissa", "017", "kissanminttulelu", 13.90);
 INSERT INTO lelu VALUES ("kissa", "018", "huiska", 4.90);
 INSERT INTO lelu VALUES ("kissa", "019", "leluhiiri", 8.90);
 
+
+INSERT INTO hoito VALUES ("koira", "020", "shampoo", 4.90);
+INSERT INTO hoito VALUES ("koira", "021", "harja", 5.90);
+INSERT INTO hoito VALUES ("koira", "022", "kynsisakset", 7.90);
+INSERT INTO hoito VALUES ("koira", "023", "trimmaussakset", 8.90);
+INSERT INTO hoito VALUES ("koira", "024", "punkkikarkote", 11.90);
+INSERT INTO hoito VALUES ("kissa", "025", "harja", 4.90);
+INSERT INTO hoito VALUES ("kissa", "026", "kynsisakset", 6.90);
+INSERT INTO hoito VALUES ("kissa", "027", "shampoo", 3.90);
+INSERT INTO hoito VALUES ("kissa", "028", "punkkikarkote", 10.90);
+INSERT INTO hoito VALUES ("kissa", "029", "hiekkalaatikko", 12);
+INSERT INTO hoito VALUES ("kissa", "030", "kissanhiekka", 15);
 INSERT INTO hoito VALUES ("kissa", "031", "kissanhiekkalapio", 2.90);
 
+INSERT INTO ulkoilu VALUES ("koira", "032", "hihna", 8);
+INSERT INTO ulkoilu VALUES ("koira", "033", "kaulapanta", 6);
+INSERT INTO ulkoilu VALUES ("koira", "034", "valjaat", 18);
+INSERT INTO ulkoilu VALUES ("koira", "035", "sadetakki", 15.90);
+INSERT INTO ulkoilu VALUES ("koira", "036", "talvitakki", 21.90);
+INSERT INTO ulkoilu VALUES ("koira", "037", "kakkapussit", 2.90);
 INSERT INTO ulkoilu VALUES ("koira", "038", "heijastin", 1.90);
 
+INSERT INTO tarvike values ("kissa", "039", "kuljetuskoppa", 22);
+INSERT INTO tarvike values ("kissa", "040", "valjaat", 14);
+INSERT INTO tarvike values ("kissa", "041", "hihna", 9.90);
+INSERT INTO tarvike values ("kissa", "042", "peti", 15.90);
+INSERT INTO tarvike values ("kissa", "043", "raapimispuu", 55.90);
 INSERT INTO tarvike values ("kissa", "044", "ruokakuppi", 7.90);
 
-INSERT INTO ruoka VALUES ("koira", "herkku", 10, 5, "046");
 
 
 /*
