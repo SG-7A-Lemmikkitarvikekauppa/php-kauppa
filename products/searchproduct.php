@@ -11,7 +11,7 @@ $phrase = $parameters[1];
 
 try{
     $db = openDb();
-    $sql = "select * from product where name like '%phrase%'";
+    $sql = "select * from asiakas where name like '%phrase%'";
     selectAsJson($db,$sql);
 }
 
