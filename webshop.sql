@@ -4,6 +4,9 @@ create database verkkokauppa;
 
 use verkkokauppa;
 
+CREATE table lemmikki(
+    id VARCHAR(10) PRIMARY KEY
+);
 
 create table hoito(
     id VARCHAR(10),
@@ -20,9 +23,6 @@ create table lelu(
     FOREIGN KEY (id) REFERENCES lemmikki(id)
 );
 
-CREATE table lemmikki(
-    id VARCHAR(10) PRIMARY KEY
-);
 
 create table ruoka(
     id VARCHAR(10) ,
@@ -67,24 +67,25 @@ create table tilaus (
 );
 
 
-insert into tuote (name) values ("Koiranruoka");
-insert into tuote (name) values ("Kissanruoka");
 
-insert into kategoria (nimi) values ("Koirat");
-insert into kategoria (nimi) values ("Kissat");
-insert into kategoria (nimi) values ("Jyrsijät");
 
-INSERT INTO ruoka VALUES ("1" ,"pentu", "10", "25");
-
-INSERT INTO ruoka (maara) VALUES ("10");
-
-INSERT INTO ruoka (hinta) VALUES ("25");
-
-DROP Table lemmikki;
-
+INSERT INTO ruoka VALUES ("koira" ,"pentu", 10, 2, "001");
+INSERT INTO ruoka VALUES ("kissa" ,"pentu", 8, 2, "002");
+INSERT INTO ruoka VALUES ("koira" ,"aikuinen", 15, 2, "003");
+INSERT INTO ruoka VALUES ("kissa" ,"aikuinen", 12, 2, "004");
+INSERT INTO ruoka VALUES ("koira" ,"allergikko", 18, 5, "005");
+INSERT INTO ruoka VALUES ("kissa" ,"allergikko", 15, 5, "006");
+INSERT INTO ruoka VALUES ("koira" ,"leikattu", 25, 10, "007");
+INSERT INTO ruoka VALUES ("kissa" ,"leikattu", 25, 10, "008");
+INSERT INTO ruoka VALUES ("koira" ,"seniori", 40, 15, "009");
 INSERT INTO ruoka VALUES ("kissa" ,"seniori", 35, 15, "010");
+INSERT INTO ruoka VALUES ("koira" ,"puruluu", 16, 5, "045");
+INSERT INTO ruoka VALUES ("koira" ,"herkku", 10, 5, "046");
+
 
 INSERT INTO lemmikki VALUES ("Kissa");
+INSERT INTO lemmikki VALUES ("Koira");
+
 
 INSERT INTO lelu VALUES ("kissa", "019", "leluhiiri", 8.90);
 
