@@ -126,6 +126,9 @@ INSERT INTO tarvike values ("kissa", "042", "peti", 15.90);
 INSERT INTO tarvike values ("kissa", "043", "raapimispuu", 55.90);
 INSERT INTO tarvike values ("kissa", "044", "ruokakuppi", 7.90);
 
+UPDATE ruoka
+SET rtyyppi = 'Koiran kuivaruoka'
+WHERE tuotenro = 001;
 
 
 /*
