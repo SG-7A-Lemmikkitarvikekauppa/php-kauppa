@@ -25,6 +25,11 @@ create table lelu(
     FOREIGN KEY (id) REFERENCES lemmikki(id)
 );
 
+CREATE TABLE kuvat (
+  idkuva INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nimi VARCHAR(255),
+  kuva LONGBLOB
+);
 
 create table ruoka(
     id VARCHAR(10) ,
@@ -94,6 +99,8 @@ UPDATE ruoka SET nimi = 'Leikatun kissan erikoisruoka' WHERE tuotenro = (008);
 
 UPDATE ruoka SET nimi = 'Hampaiden puhdistusluu' WHERE tuotenro = (045);
 ALTER TABLE ruoka ADD COLUMN kuva BLOB;
+
+INSERT INTO kuvat (nimi, kuva) VALUES ('kissalaser.jpg', LOAD_FILE('php-kauppa/images/kissalaser.jpg'));
 
 
 ALTER TABLE ruoka ADD kuvaus VARCHAR(255);
