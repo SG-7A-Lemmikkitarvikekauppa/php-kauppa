@@ -66,6 +66,58 @@ create table tilaus (
     on delete RESTRICT
 );
 
+ALTER TABLE ruoka ADD nimi VARCHAR(255);
+
+UPDATE ruoka SET nimi = 'Seniorikissan herkut' WHERE tuotenro = (010);
+
+UPDATE ruoka SET nimi = 'Seniorikoiran muona' WHERE tuotenro = (009);
+
+UPDATE ruoka SET nimi = 'Koiranpennun voimaruoka' WHERE tuotenro = (001);
+
+UPDATE ruoka SET nimi = 'Kissanpennun herkullinen ateria' WHERE tuotenro = (002);
+
+UPDATE ruoka SET nimi = 'Koiran luonnolliset makupalat' WHERE tuotenro = (046);
+
+UPDATE ruoka SET nimi = 'Koiran täysravinto' WHERE tuotenro = (003);
+
+UPDATE ruoka SET nimi = 'Kissan täysravinto' WHERE tuotenro = (004);
+
+UPDATE ruoka SET nimi = 'Koiran turvallinen ruoka-allergia -vaihtoehto' WHERE tuotenro = (005);
+
+UPDATE ruoka SET nimi = 'Kissan turvallinen ruoka-allergia -vaihtoehto' WHERE tuotenro = (006);
+
+UPDATE ruoka SET nimi = 'Leikatun koiran erikoisruoka' WHERE tuotenro = (007);
+
+UPDATE ruoka SET nimi = 'Leikatun kissan erikoisruoka' WHERE tuotenro = (008);
+
+UPDATE ruoka SET nimi = 'Hampaiden puhdistusluu' WHERE tuotenro = (045);
+ALTER TABLE ruoka ADD COLUMN kuva BLOB;
+
+
+ALTER TABLE ruoka ADD kuvaus VARCHAR(255);
+
+UPDATE ruoka SET kuvaus = 'Erityisen maistuva täysravinto sisältää leikatun kissasi hyvinvointia helliviä aineksia, kuten hyvin sulavaa kanaa, vihanneksia, hedelmiä, lohiöljyä ja prebiootteja.' WHERE tuotenro = (008);
+
+UPDATE ruoka SET kuvaus = 'Täysipainoinen, runsaasti kanaa sisältävä täysravinto kookkaaksi kasvaville pennuille. Turvaa tasapainoista kasvua ja sisältää mm. kehityksen kannalta tärkeää omega-3-rasvahappoa.' WHERE tuotenro = (001);
+
+UPDATE ruoka SET kuvaus = 'Puruluu on valmistettu laadukkaasta, yhtenäisestä naudannahasta käsin rullaamalla ja koneella puristamalla.' WHERE tuotenro = (045);
+
+UPDATE ruoka SET kuvaus = 'Erityisen maistuva täysravinto sisältää pennun hyvinvointia helliviä aineksia, kuten hyvin sulavaa kanaa, vihanneksia, hedelmiä, lohiöljyä ja prebiootteja.' WHERE tuotenro = (002);
+UPDATE ruoka SET kuvaus = 'Täysikokoisille koirille tarkoitettu runsasproteininen täysravinto. Sisältää rutkasti lihaa eikä lainkaan vehnää. ' WHERE tuotenro = (003);
+
+UPDATE ruoka SET kuvaus = 'Täysikokoisille kissoille tarkoitettu runsasproteininen täysravinto. Extra määrä lihaa ja vähemmän kasviksia.' WHERE tuotenro = (004);
+
+UPDATE ruoka SET kuvaus = 'Tarkoitettu ruoka-aineallergiasta kärsiville koirille. Sisältää lohta, herneitä ja perunaa. ' WHERE tuotenro = (005);
+
+UPDATE ruoka SET kuvaus = 'Tarkoitettu ruoka-aineallergiasta kärsiville kissoille. Aidosti lihaisaa kissanruokaa ilman vehnää tai sokeria.' WHERE tuotenro = (006);
+
+UPDATE ruoka SET kuvaus = 'Erikoisruoka tarkoitettu leikatuille koirille. Sisältää broileria sekä vitamineja ja hivenaineita' WHERE tuotenro = (007);
+
+UPDATE ruoka SET kuvaus = 'Erikoisruoka tarkoitettu vanhemmille koirille. Runsaan lihan lisäksi sisältää runsaasti kivennääisaineita, vitamineja sekä antioksidantteja.' WHERE tuotenro = (009);
+
+UPDATE ruoka SET kuvaus = 'Vanhemmille kissoille tarkoitettu ravitseva ruoka. Sisältää suomalaisia järvikaloja sekä kermaviiliä.' WHERE tuotenro = (010);
+
+UPDATE ruoka SET kuvaus = 'Herkullisia makupaloja perusterveille koirille. Sisältää sian sekä naudan lihaa.' WHERE tuotenro = (046);
 
 
 
