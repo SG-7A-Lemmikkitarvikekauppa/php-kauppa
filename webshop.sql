@@ -8,6 +8,8 @@ CREATE table lemmikki(
     id VARCHAR(10) PRIMARY KEY
 );
 
+
+
 create table hoito(
     id VARCHAR(10),
     tuotenro VARCHAR(4) primary key,
@@ -178,9 +180,13 @@ INSERT INTO tarvike values ("kissa", "042", "peti", 15.90);
 INSERT INTO tarvike values ("kissa", "043", "raapimispuu", 55.90);
 INSERT INTO tarvike values ("kissa", "044", "ruokakuppi", 7.90);
 
+INSERT INTO tuoteryhmat values ("")
+
 UPDATE ruoka
 SET rtyyppi = 'Koiran kuivaruoka'
 WHERE tuotenro = 001;
+
+drop table tuoteryhmat;
 
 
 /*
