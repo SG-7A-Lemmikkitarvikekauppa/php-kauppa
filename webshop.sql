@@ -4,6 +4,9 @@ create database verkkokauppa;
 
 use verkkokauppa;
 
+
+ALTER TABLE ruoka ADD nimi VARCHAR(255);
+
 CREATE table lemmikki(
     id VARCHAR(10) PRIMARY KEY
 );
@@ -125,6 +128,8 @@ INSERT INTO tarvike values ("kissa", "041", "hihna", 9.90);
 INSERT INTO tarvike values ("kissa", "042", "peti", 15.90);
 INSERT INTO tarvike values ("kissa", "043", "raapimispuu", 55.90);
 INSERT INTO tarvike values ("kissa", "044", "ruokakuppi", 7.90);
+
+
 
 
 
