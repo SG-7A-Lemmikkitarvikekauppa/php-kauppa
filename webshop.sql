@@ -75,6 +75,31 @@ create table tilaus (
 
 ALTER TABLE ruoka ADD nimi VARCHAR(255);
 
+ALTER table lelu ADD kuvaus varchar(255);
+
+UPDATE lelu SET kuvaus = "Kestävä Köysilelu koirallesi" where tuotenro = (011);
+UPDATE lelu SET kuvaus = "Pallo kaikille kotieläimille" where tuotenro = (012);
+UPDATE lelu SET kuvaus = "Aktivointilelu aktivoi koiraasi" where tuotenro = (013);
+UPDATE lelu SET kuvaus = "Vinkuu sit niin saatanasti" where tuotenro = (014);
+UPDATE lelu SET kuvaus = "Laadukas laserlelu kissallesi" where tuotenro = (015);
+UPDATE lelu SET kuvaus = "Lelu on täytetty kuivalla kissanmintulla, se auttaa vähentämään kissan stressiä" where tuotenro = (017);
+UPDATE lelu SET kuvaus = "Matatabi eli mantsurianlaikkuköynnös on myrkytön kasvi, jonka tuoksua kissat rakastavat." where tuotenro = (018);
+UPDATE lelu SET kuvaus = "Laadukas leluhiiri kissoille, sisältää pariston" where tuotenro = (019);
+
+
+UPDATE lelu SET hinta = 15 where tuotenro = (011);
+UPDATE lelu SET hinta = 9 where tuotenro = (012);
+
+UPDATE lelu SET hinta = 19 where tuotenro = (013);
+UPDATE lelu SET hinta = 6 where tuotenro = (014);
+UPDATE lelu SET hinta = 11 where tuotenro = (015);
+UPDATE lelu SET hinta = 13 where tuotenro = (017);
+UPDATE lelu SET hinta = 4 where tuotenro = (018);
+UPDATE lelu SET hinta = 8 where tuotenro = (019);
+
+
+
+
 UPDATE ruoka SET nimi = 'Seniorikissan herkut' WHERE tuotenro = (010);
 
 UPDATE ruoka SET nimi = 'Seniorikoiran muona' WHERE tuotenro = (009);
