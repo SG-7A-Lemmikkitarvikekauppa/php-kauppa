@@ -1,6 +1,6 @@
 <?php
 
-    echo "<h1> hihujefhiebu </h1>";
+    echo "<h1> hihuu </h1>";
 
 
 /*
