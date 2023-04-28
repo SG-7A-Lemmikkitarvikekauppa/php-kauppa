@@ -12,6 +12,15 @@ CREATE table lemmikki(
 );
 
 
+create table tuote(
+    id VARCHAR(10),
+    tuotenro VARCHAR(4) primary key,
+    nimi varchar(255) not NULL,
+    hinta DOUBLE (10,2) not NULL,
+    kuvaus VARCHAR(255) not NULL,
+    kuva BLOB NOT NULL,
+    FOREIGN KEY (id) REFERENCES lemmikki(id)
+);
 
 create table hoito(
     id VARCHAR(10),
@@ -137,7 +146,7 @@ UPDATE ruoka SET kuvaus = 'Erityisen maistuva täysravinto sisältää leikatun 
 
 UPDATE ruoka SET kuvaus = 'Täysipainoinen, runsaasti kanaa sisältävä täysravinto kookkaaksi kasvaville pennuille. Turvaa tasapainoista kasvua ja sisältää mm. kehityksen kannalta tärkeää omega-3-rasvahappoa.' WHERE tuotenro = (001);
 
-UPDATE ruoka SET kuvaus = 'Puruluu on valmistettu laadukkaasta, yhtenäisestä naudannahasta käsin rullaamalla ja koneella puristamalla.' WHERE tuotenro = (045);
+UPDATE ruoka SET kuvaus = '' WHERE tuotenro = (045);
 
 UPDATE ruoka SET kuvaus = 'Erityisen maistuva täysravinto sisältää pennun hyvinvointia helliviä aineksia, kuten hyvin sulavaa kanaa, vihanneksia, hedelmiä, lohiöljyä ja prebiootteja.' WHERE tuotenro = (002);
 UPDATE ruoka SET kuvaus = 'Täysikokoisille koirille tarkoitettu runsasproteininen täysravinto. Sisältää rutkasti lihaa eikä lainkaan vehnää. ' WHERE tuotenro = (003);
@@ -155,6 +164,62 @@ UPDATE ruoka SET kuvaus = 'Erikoisruoka tarkoitettu vanhemmille koirille. Runsaa
 UPDATE ruoka SET kuvaus = 'Vanhemmille kissoille tarkoitettu ravitseva ruoka. Sisältää suomalaisia järvikaloja sekä kermaviiliä.' WHERE tuotenro = (010);
 
 UPDATE ruoka SET kuvaus = 'Herkullisia makupaloja perusterveille koirille. Sisältää sian sekä naudan lihaa.' WHERE tuotenro = (046);
+
+INSERT INTO tuote VALUES ("koira", "001", "Koiran kuivaruoka", 10, "Täysipainoinen, runsaasti kanaa sisältävä täysravinto kookkaaksi kasvaville pennuille. Turvaa tasapainoista kasvua ja sisältää mm. kehityksen kannalta tärkeää omega-3-rasvahappoa.", "");
+INSERT INTO tuote values ("kissa", "002", "Kissanpennun ruoka", 8, "Erityisen maistuva täysravinto sisältää pennun hyvinvointia helliviä aineksia, kuten hyvin sulavaa kanaa, vihanneksia, hedelmiä, lohiöljyä ja prebiootteja.", "");
+INSERT INTO tuote VALUES ("koira", "003", "Koiran täysravinto", 15, "Täysikokoisille koirille tarkoitettu runsasproteininen täysravinto. Sisältää rutkasti lihaa eikä lainkaan vehnää.", "");
+INSERT INTO tuote VALUES ("kissa", "004", "Kissan täysravinto", 12, "Täysikokoisille kissoille tarkoitettu runsasproteininen täysravinto. Extra määrä lihaa ja vähemmän kasviksia.", "");
+INSERT INTO tuote VALUES ("koira", "005", "Koiran allergia vaihtoehto", 18, "Tarkoitettu ruoka-aineallergiasta kärsiville koirille. Sisältää lohta, herneitä ja perunaa.", "");
+INSERT INTO tuote VALUES ("kissa", "006", "Kissan allergia vaihtoehto", 15, "Tarkoitettu ruoka-aineallergiasta kärsiville kissoille. Aidosti lihaisaa kissanruokaa ilman vehnää tai sokeria.", "");
+INSERT INTO tuote VALUES ("koira", "007", "Leikatun koiran erikoisruoka", 25, "Erikoisruoka tarkoitettu leikatuille koirille. Sisältää broileria sekä vitamineja ja hivenaineita", "");
+INSERT INTO tuote VALUES ("kissa", "008", "Leikatun kissan erikoisruoka", 25, "Erityisen maistuva täysravinto sisältää leikatun kissasi hyvinvointia helliviä aineksia, kuten hyvin sulavaa kanaa, vihanneksia, hedelmiä, lohiöljyä ja prebiootteja.", "");
+INSERT INTO tuote VALUES ("koira", "009", "seniori koiranruoka", 40, "Erikoisruoka tarkoitettu vanhemmille koirille. Runsaan lihan lisäksi sisältää runsaasti kivennääisaineita, vitamineja sekä antioksidantteja.", "");
+INSERT INTO tuote VALUES ("kissa", "010", "seniori kissanruoka", 35, "Vanhemmille kissoille tarkoitettu ravitseva ruoka. Sisältää suomalaisia järvikaloja sekä kermaviiliä.", "");
+INSERT INTO tuote VALUES ("koira", "045", "Hampaiden puhdistusluu", 16, "Puruluu on valmistettu laadukkaasta, yhtenäisestä naudannahasta käsin rullaamalla ja koneella puristamalla.", "");
+INSERT INTO tuote VALUES ("koira", "046", "Koiran makupalat", 10, "Herkullisia makupaloja perusterveille koirille. Sisältää sian sekä naudan lihaa.", "");
+INSERT INTO tuote VALUES ("koira", "020", "Shampoo", 4, "Koiran shampoo", "");
+INSERT INTO tuote VALUES ("koira", "021", "Harja", 5, "Harja koiralle", "");
+INSERT INTO tuote VALUES ("koira", "022", "Kynsisakset", 7, "Koiran kynsisakset", "");
+INSERT INTO tuote VALUES ("koira", "023", "Trimmaussakset", 8, "Koiran trimmaamiseen", "");
+INSERT INTO tuote VALUES ("koira", "024", "Punkkikarkote", 11, "Punkkikarkote koiralle", "");
+INSERT INTO tuote VALUES ("kissa", "025", "Harja", 4, "Kissan harja", "");
+INSERT INTO tuote VALUES ("kissa", "026", "Kynsisakset", 6, "Kynsisakset kissalle", "");
+INSERT INTO tuote VALUES ("kissa", "027", "Shampoo", 3, "Kissan shampoo", "");
+INSERT INTO tuote VALUES ("kissa", "028", "Punkkikarkote", 10, "Punkkikarkote kissalle", "");
+INSERT INTO tuote VALUES ("kissa", "029", "Hiekkalaatikko", 12, "Kissanhiekkalaatikko", "");
+INSERT INTO tuote VALUES ("kissa", "030", "Kissanhiekka", 15, "Kissanhiekkaa", "");
+INSERT INTO tuote VALUES ("kissa", "031", "Kissanhiekkalapio", 2, "Hyvä lapio", "");
+INSERT INTO tuote VALUES ("koira", "011", "Köysilelu", 15, "Kestävä köysilelu koirallesi", "");
+INSERT INTO tuote VALUES ("koira", "012", "Pallo", 9, "Pallo koiralle leikkeihin", "");
+INSERT INTO tuote VALUES ("koira", "013", "Aktivointilelu", 19, "Aktivoi koiraasi", "");
+INSERT INTO tuote VALUES ("koira", "014", "Vinkulelu", 6, "Vinkuu nii saatanasti", "");
+INSERT INTO tuote VALUES ("kissa", "015", "Laserlelu", 11, "Laadukas laserlelu kissallesi", "");
+INSERT INTO tuote VALUES ("kissa", "017", "Kissanminttulelu", 13, "Lelu on täytetty kuivalla kissanmintulla", "");
+INSERT INTO tuote VALUES ("kissa", "018", "Huiska", 4, "Leluhuiska kissanleikkeihin", "");
+INSERT INTO tuote VALUES ("kissa", "019", "Leluhiiri", 8, "Leluhiiri kissoille, sisältää pariston", "");
+INSERT INTO tuote VALUES ("kissa", "039", "Kuljetuskoppa", 22, "Tilava koppa kissallesi", "");
+INSERT INTO tuote VALUES ("kissa", "040", "Valjaat", 14, "Laadukkaat valjaat kissalle", "");
+INSERT INTO tuote VALUES ("kissa", "041", "Hihna", 9, "% metrin hihn kissalle", "");
+INSERT INTO tuote VALUES ("kissa", "042", "Peti", 15, "Pehmeä peti kissallesi", "");
+INSERT INTO tuote VALUES ("kissa", "043", "raapimispuu", 55, "Laadukas raapimispuu kissalle", "");
+INSERT INTO tuote VALUES ("kissa", "044", "Ruokakuppi", 7, "Kaunis kuppi", "");
+INSERT INTO tuote VALUES ("koira", "032", "Hihna", 8, "5 metriä pitkä hihna", "");
+INSERT INTO tuote VALUES ("koira", "033", "Kaulapanta", 6, "Hieno panta koiralle", "");
+INSERT INTO tuote VALUES ("koira", "034", "Valjaat", 18, "Laadukkaat valjaat isolle koiralle", "");
+INSERT INTO tuote VALUES ("koira", "035", "Sadetakki", 15, "Hieno takki koiralle sadekeliin", "");
+INSERT INTO tuote VALUES ("koira", "036", "Talvitakki", 21, "Lämmin takki koiralle", "");
+INSERT INTO tuote VALUES ("koira", "037", "Kakkapussit", 2, "50 kpl kakkapusseja", "");
+INSERT INTO tuote VALUES ("koira", "038", "Heijastin", 1, "Heijastin pimeisiin iltoihin", "");
+
+ALTER TABLE tuote ADD COLUMN tuoteid INT NOT NULL;
+
+ALTER TABLE tuote ADD CONSTRAINT fk_tuoteryhmat_tuoteid FOREIGN KEY (tuoteid) REFERENCES tuoteryhmat (tuoteid);
+
+UPDATE tuote
+SET tuoteid = 5
+WHERE tuotenro = '043';
+
+ALTER table tuote drop column tuoteid;
 
 
 
