@@ -4,6 +4,9 @@ create database verkkokauppa;
 
 use verkkokauppa;
 
+
+ALTER TABLE ruoka ADD nimi VARCHAR(255);
+
 CREATE table lemmikki(
     id VARCHAR(10) PRIMARY KEY
 );
@@ -284,6 +287,8 @@ SET rtyyppi = 'Koiran kuivaruoka'
 WHERE tuotenro = 001;
 
 drop table tuoteryhmat;
+
+
 
 
 /*
