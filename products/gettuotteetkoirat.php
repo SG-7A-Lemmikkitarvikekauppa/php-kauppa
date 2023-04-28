@@ -9,7 +9,8 @@ $tuoteId = $parameters[1];
 
 try {
     $db = openDb();
-    selectAsJson($db,"select * from tuote where tuoteid = $tuoteId AND id = 'kissa'");
+    selectAsJson($db,"select * from tuote where tuoteid = $tuoteId AND id = 'koira'");
+
 } catch (PDOException $pdoex) {
     returnError($pdoex);
 }
