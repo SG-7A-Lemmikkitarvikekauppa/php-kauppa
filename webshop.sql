@@ -217,23 +217,27 @@ ALTER TABLE tuote ADD CONSTRAINT fk_tuoteryhmat_tuoteid FOREIGN KEY (tuoteid) RE
 
 UPDATE tuote
 SET tuoteid = 3
-WHERE tuotenro = '001' '002' '003' '004' '005' '006' '007' '008' '009' '010' '045' '046';
+WHERE tuotenro IN ('001', '002', '003', '004', '005', '006', '007', '008', '009', '010', '045', '046');
+
 
 UPDATE tuote
 SET tuoteid = 1
-WHERE tuotenro = '011' '012' '013' '014' '015' '016' '017' '018' '019';
+WHERE tuotenro IN ('011', '012', '013', '014', '015', '016', '017', '018', '019');
 
 UPDATE tuote
 SET tuoteid = 2
-WHERE tuotenro = '028' '020' '021' '022' '023' '024' '025' '026' '027';
+WHERE tuotenro IN ('028', '020', '021', '022', '023', '024', '025', '026','027');
 
 UPDATE tuote
 SET tuoteid = 5
-WHERE tuotenro = '029' '030' '031' '039' '042' '043' '044' ;
+WHERE tuotenro IN ('029', '030', '031', '039', '042', '043', '044') ;
 
 UPDATE tuote
 SET tuoteid = 4
-WHERE tuotenro = '032' '033' '034' '035' '036' '037' '038' '040' '041';
+WHERE tuotenro IN ('032', '033', '034', '035', '036', '037', '038', '040', '041');
+
+ALTER TABLE tuote ADD CONSTRAINT fk_tuoteryhmat_tuoteid FOREIGN KEY (tuoteid) REFERENCES tuoteryhmat (tuoteid);
+
 
 ALTER table tuote drop column tuoteid;
 
