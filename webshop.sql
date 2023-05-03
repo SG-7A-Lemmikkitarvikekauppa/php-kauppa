@@ -98,6 +98,9 @@ UPDATE lelu SET kuvaus = "Lelu on täytetty kuivalla kissanmintulla, se auttaa v
 UPDATE lelu SET kuvaus = "Matatabi eli mantsurianlaikkuköynnös on myrkytön kasvi, jonka tuoksua kissat rakastavat." where tuotenro = (018);
 UPDATE lelu SET kuvaus = "Laadukas leluhiiri kissoille, sisältää pariston" where tuotenro = (019);
 
+UPDATE lelu SET hinta = "4" WHERE tuotenro = "018";
+UPDATE lelu SET hinta = "4" WHERE tuotenro = "012";
+UPDATE lelu SET hinta = "8" WHERE tuotenro = "019";
 
 UPDATE lelu SET hinta = 15 where tuotenro = (011);
 UPDATE lelu SET hinta = 9 where tuotenro = (012);
